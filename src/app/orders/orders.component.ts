@@ -33,12 +33,19 @@ export class OrdersComponent implements OnInit {
   //   localStorage.setItem('Order',JSON.stringify(test));
   //   console.log(test)  
   // }
+ 
   searchtext:any
   order:any=[] 
   OrderData: any;
+  name:any;
   data: any 
+  date:any;
   Address: any;
-
+  prodId:any;
+  qnt:any;
+  price:any;
+ApproximateTime:any;
+OrderStatus:any;
   orderDetails :any = []
   test: any;
   pop=false;
@@ -48,10 +55,21 @@ export class OrdersComponent implements OnInit {
   order1: any=[];
   data1: any;
   constructor() { }
-
+  anu(test:any){
+    window.location.href=("/galaxyroute")
+    localStorage.setItem('anu',JSON.stringify(test));
+    // localStorage.setItem('local',JSON.stringify(this.cart1));
+    console.log(test)
+   
+  }
   ngOnInit(): void {
+    const localdata=localStorage.getItem('anu')
+    if(localdata!=null){                                                    
+      this.test = JSON.parse(localdata)
+    }
+  
 
-    fetch("http://localhost:2000/placeorders/getAllOrders",{
+    fetch("http://localhost:6900/orderRoute/getAllOrders",{
       method:"GET",
       headers:{
         "access-Control-Allow-Origin":"*",

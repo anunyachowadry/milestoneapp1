@@ -28,7 +28,8 @@ export class AddRawComponent implements OnInit {
       color: new FormControl(""),
       size: new FormControl(""),
       region: new FormControl(""),
-      date: new FormControl("")
+      date: new FormControl(""),
+      stone: new FormControl("")
     }) 
 
   }
@@ -39,6 +40,7 @@ export class AddRawComponent implements OnInit {
     this.productForm.value.color ==''||
     this.productForm.value.region ==''||
     this.productForm.value.color ==''||
+    this.productForm.value.stone ==''||
     this.productForm.value.date =='')
     { 
       Swal.fire(  

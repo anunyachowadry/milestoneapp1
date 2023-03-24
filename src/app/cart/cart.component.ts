@@ -10,6 +10,8 @@ export class CartComponent implements OnInit {
  
     OrderItems:any;
     cartItem: number = 0;
+  Get: any;
+  sign: any=[]
 
     constructor() { }
   
@@ -17,6 +19,7 @@ export class CartComponent implements OnInit {
       this.CartDetails() // get the data
       this.loadCart() // total product amount
       this.cartItemFunc()
+    
     }
   
     getCartDetails: any = [];
@@ -66,19 +69,12 @@ export class CartComponent implements OnInit {
       localStorage.removeItem('anunya');
       this.getCartDetails = [];
       this.grandtotal = 0;
+      window .location.reload()
     }
     // single delete
     singleDelete(cart: any) {
       console.log(cart);  // show in console
-      Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
+      
       if (localStorage.getItem('anunya')) {
         this.getCartDetails = JSON.parse(localStorage.getItem('anunya') || '{}');  // get the details in localstorage
        
@@ -92,45 +88,23 @@ export class CartComponent implements OnInit {
           }
         }
       }
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-      }
-      })  
-    }
+     
+        window .location.reload()
   
+    
+      
+        // localStorage.removeItem('anunya');
+        
+
+      }
+    
     cartItemFunc() {
       if (localStorage.getItem('anunya') != null) {
         var cartCount = JSON.parse(localStorage.getItem('anunya') || '{}');
         this.cartItem = cartCount.length;  
       }
     }
-    checkout(){
-      const Obj={
-        OrderItems:this.OrderItems
-      }
-      var requestOptions = {
-        method: 'POST',
-        body:JSON.stringify(Obj)
-      };
-      console.log(requestOptions);  
-      fetch("https://localhost:2000/orderRoute/post",{
-        method:'POST',
-        headers:{
-          "Access-Control-Allow-Origin":"*",
-          "Content-Type":'application/json'
-        },
-      body:JSON.stringify(Obj)       
-      })  .then(response => response.json())
-      
-      .then(result =>
-        console.log(result))
-       
-      .catch(error => console.log('error',error));      
-    }  
+    
   }
 
 

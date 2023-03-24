@@ -1,65 +1,131 @@
-@import url(https://fonts.googleapis.com/css?family=Exo:100);
-* {margin: 0; padding: 0; border: 0 none;}
-html, body {height: 100%; width: 100%; font-size: 1rem; font-family: 'Exo', sans-serif; font-weight: 100;}
-.cont-slider {
-    position: relative;
-    height: 100vh;
-    max-height: 100vh;
-    width: auto;
-    min-width: 100vw;
-    margin: 0 auto;
-    overflow: hidden;
+body{
+  background-image: url(https://img.freepik.com/free-vector/close-up-white-marble-textured-background_53876-58927.jpg) ;
+  height:1000%
 }
-.slider {
-    animation: sliding 25s ease-out 0s backwards infinite;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 500%;
-    height: 100%;
-}
-.slide {
-    display: inline-block;
-    position: relative;
-    width: 20%;
-    height: 100%;    
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-}
-.slide span {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 0 5vh 5vh 0;
-    color: #FFF;
-    position: absolute;
-    left: 0;
-    top: 40vh;
-    font-size: 20vh;
-    line-height: 20vh;
-    border: 1px solid rgba(255,255,255,.45);
-    border-left: 0 none;
-}
-.one {
-  background-image: url(https://t3.ftcdn.net/jpg/01/31/90/38/360_F_131903866_bCH6ZWvZJ2qwxm6FI7jUOc7oZ2ksY7Oz.jpg);}
-.two {
-  background-image: url(https://bhandarimarbleworld.com/wp-content/uploads/2021/02/Most-popular-granite-colors-2.jpg);}
-.three {
-  background-image: url(https://usenaturalstone.org/wp-content/uploads/2017/03/pros-cons-granite.jpg);}
-.four {
-  background-image: url(https://assets-news.housing.com/news/wp-content/uploads/2022/01/26201744/granite-versus-quartz-kitchen-countertops-shutterstock_1150490255-1200x700-compressed.jpg);}
-.five {
-  background-image: url(https://cdn.msisurfaces.com/images/roomscenes/medium/white-ornamental-granite-b.jpg);}
 
-@keyframes sliding {
-  0% {left: 0%; }
-  15% {left: 0%; }
-  20% {left: -100%; }
-  35% {left: -100%; }
-  40% {left: -200%; }  
-  55% {left: -200%; }
-  60% {left: -300%; }
-  75% {left: -300%; }
-  80% {left: -400%; }
-  95% {left: -400%; }   
-  100% {left: 0; }
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+
+}
+.h1-title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #fff;
+}
+.slides {
+  width: 609px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+.slides input { 
+  display: none; 
+}
+
+.slide-container { 
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  transform: scale(0);
+  transition: all .7s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nav label {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+  margin-top: 29%;
+}
+
+.nav label:hover { 
+  color: #000;
+}
+
+.nav .next { 
+  right: 5px; 
+}
+
+.nav .prev {
+  left: 5px;
+} 
+
+input:checked + .slide-container  .slide {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { 
+  display: block; 
+}
+
+.nav-dots {
+width: 100%;
+height: 11px;
+display: block;
+position: absolute;
+text-align: center;
+  margin-top: 63%;
+}
+
+.nav-dots .nav-dot {
+width: 11px;
+height: 11px;
+margin: 0 4px;
+position: relative;
+border-radius: 100%;
+display: inline-block;
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+background: rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 609px) {
+.slides {
+  width: 100%;
+}
+}
+
+.myvideo {
+text-decoration: none;
+color: #fff;
+background: red;
+text-align: center;
+padding: 10px;
+font-weight: 600;
+z-index:100;
+position: absolute;
+bottom: 20px;
+}
+.myvideo:hover {
+  color: #000;
 }

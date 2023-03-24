@@ -12,23 +12,31 @@ export class CheckoutComponent implements OnInit {
   constructor() { }
  
 
-    grandtotal: number = 0;
+   grandtotal: any;
     getCartDetails: any = [];
      Firstname:any;
      Lastname:any;
      PhoneNumber:any;
-     Area:any;
+     Address:any;
      City:any;
      State:any;
      Pincode:any;
      Email:any; 
-  
+     removeall:any
     
      name:any;
-     price:number=0;
-     qnt:number=0;
+     price:any;
+     quality:any;
+     size:any;
+     thick:any;
+     description:any;
+   region:any;
+   date:any;
+
+
+     qnt:any;
     prodId:any;
-    Totalprice:number=0;    
+    Totalprice:any;    
     imgurl:any;
   
   
@@ -46,7 +54,7 @@ export class CheckoutComponent implements OnInit {
     this.pop=true;
   }
   
-cash1(){
+  cash1(){
 
   this.finalcartItem = localStorage.getItem('anunya')
   console.log(this.finalcartItem);
@@ -57,7 +65,7 @@ cash1(){
     "Pincode":this.Pincode,
     "PhoneNumber":this.PhoneNumber,
     "Email":this.Email,
-    "Area":this.Area,
+    "Address":this.Address,
    "City":this.City,
    "State":this.State,
    "OrderItems":JSON.parse(this.finalcartItem)  
@@ -69,7 +77,7 @@ cash1(){
       };
       console.log(Obj);  
       console.log(JSON.stringify(Obj))   //product details with user details
-      fetch("http://localhost:2000/placeorders/post",{
+      fetch("http://localhost:6900/orderRoute/post",{
         method:'POST',
         headers:{
           "Access-Control-Allow-Origin":"*",
@@ -86,10 +94,11 @@ cash1(){
        
       .catch(error => console.log('error',error));  
       
- 
+
     
   Swal.fire('order  placed Successfully!', '', 'success').then(() => {
-     window.location.href=('/product');
+     window.location.href=('/blackgalaxy');
+     localStorage.removeItem('anunya');
   } );
 }
 

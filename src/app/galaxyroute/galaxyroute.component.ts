@@ -1,37 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: 'app-galaxyroute',
+  templateUrl: './galaxyroute.component.html',
+  styleUrls: ['./galaxyroute.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class GalaxyrouteComponent implements OnInit {
 
-  
-  signupForm=false;
-  data: any=[]
-  aa: any={}
-  text: any;
- 
+  data: any;
   cartItem:number = 0;
-  constructor(private router: Router) {
-   //this.get()
-   }
+
+
 
   ngOnInit(): void {
-     this.text = JSON.parse(localStorage.getItem('Login')||'{}') 
-     console.log(this.text)
-     this.aa=this.text.UserType
-     console.log(this.aa)
-     this.cartItemFunc();
-  }  
+   
 
-  logout(){
-      localStorage.clear();
-      window.location.href=("/login")
+    const localdata=localStorage.getItem('anu')
+    if(localdata!=null){
+      this.data = JSON.parse(localdata)
+    }
+    this.cartItemFunc();
   }
+  
+
   
 
 
@@ -42,6 +34,7 @@ export class HomepageComponent implements OnInit {
       let storeDataGet: any = []; // storeDataGet is a array
       storeDataGet.push(category); // push the category into localstorage
       localStorage.setItem('anunya',JSON.stringify(storeDataGet));
+     
      
   //     Swal.fire('Added Successfully!', '', 'success').then(() => {
   //       window.location.reload()
@@ -68,11 +61,16 @@ export class HomepageComponent implements OnInit {
       else {
         localStorage.setItem('anunya', JSON.stringify(this.itemsCart));
       }
+    
 
   
     }
-    
-    window .location.reload()
+    Swal.fire('Added to Cart!', '', 'success').then(() =>
+     {
+      window .location.reload()
+    });
+    // window .location.reload()
+   
       
 }
 cartItemFunc(){
@@ -84,7 +82,7 @@ cartItemFunc(){
 }
 }
 
- 
- 
-  
+
+
+
 }

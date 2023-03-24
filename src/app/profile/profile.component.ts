@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { ProfileService } from '../profile.service';
 import { UpdateService } from '../update.service';
 
@@ -27,7 +29,7 @@ export class ProfileComponent implements OnInit {
     State:'',
   } 
   Form: any;
-  constructor(private service:ProfileService, private fb:FormBuilder) {}  
+  constructor(private service:ProfileService, private fb:FormBuilder,private router:Router) {}  
 
   ngOnInit(): void {
     this.text = JSON.parse(localStorage.getItem('Login')||'{}') 
@@ -64,6 +66,10 @@ export class ProfileComponent implements OnInit {
     
               this.products = result  //it  runs $parse automatically when it runs the $digest loop, basically $parse is the way angular evaluates expressions
             console.log(this.products)
+            Swal.fire( 'Submitted successfully!', '', 'success').then(() =>{         
+              this.companyForm = false
+              this.profile = true
+            })
                   
           }
           ).catch(err =>

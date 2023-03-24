@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
   }
 
   getStoreProducts() {
-    fetch("http://localhost:2000/products/getproduct",{
+    fetch("http://localhost:2000/products/products",{
   method:"GET",
   headers:{
     "access-Control-Allow-Origin":"*",

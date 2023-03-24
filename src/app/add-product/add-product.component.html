@@ -1,9 +1,7 @@
 <br>
-<br>
-<br> 
-<br> 
+
 <body>
-<i class="fa fa-arrow-left" style="margin-left: 1em; font-size: 20px; color: #697184;" routerLink="/inventory"></i> 
+
   <div class="container h-100" >
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-12 col-lg-9 col-xl-7">
@@ -15,8 +13,8 @@
               <div class="row text-dark">
                 <div class="col-md-12 mb-4">
                   <div class="form-outline">                    
-                    <label class="form-label" for="firstName"><b>Upload image :</b></label>
-                    <input type="text" class="form-control form-control-lg" formControlName="imgurl"  placeholder="upload your image" >                    
+                    <label class="form-label" for="firstName"><b>Image :</b></label>
+                    <input type="text" class="form-control form-control-lg" formControlName="imgurl"  placeholder="Enter image url" >                    
                   </div>
                   <div class="form-outline">                    
                     <input type="hidden" class="form-control form-control-lg" formControlName="mobile" [(ngModel)]="text.mobile" placeholder="upload your image" >                    
@@ -131,9 +129,10 @@
                     </select>                    
                  </div>
                 </div>
+                
                 <div class="col-md-6 mb-4 d-flex align-items-center">
                   <div class="form-outline datepicker w-100">
-                    <label for="birthdayDate" class="form-label"><b>Available Quantity :</b></label>
+                    <label for="birthdayDate" class="form-label"><b> Quantity :</b></label>
                     <input type="text" class="form-control form-control-lg" formControlName="qnt" placeholder="Enter your product qnty">              
                   </div>
                 </div>                             
@@ -141,13 +140,13 @@
               <div class="row text-dark">
                 <div class="col-md-6 mb-4 d-flex align-items-center">
                   <div class="form-outline datepicker w-100">
-                    <label for="birthdayDate" class="form-label"><b>Price /SQFT :</b></label>
+                    <label for="birthdayDate" class="form-label"><b>Price/sqft :</b></label>
                     <input type="text" class="form-control form-control-lg" formControlName="price" placeholder="Enter your price">                    
                   </div>
                 </div> 
                 <div class="col-md-6 mb-4 d-flex align-items-center">
                   <div class="form-outline datepicker w-100">
-                    <label for="birthdayDate" class="form-label"><b>Region of stone :</b></label>
+                    <label for="birthdayDate" class="form-label"><b>Stone Location :</b></label>
                     <input type="text" class="form-control form-control-lg" formControlName="region" placeholder="select your product location">              
                   </div>
                 </div>                             
@@ -169,6 +168,10 @@
                     <input type="date" class="form-control form-control-lg" formControlName="date" placeholder="Enter processing date">              
                   </div>
                 </div>
+              </div>
+              <div class="form-outline datepicker w-100">
+                <label for="birthdayDate" class="form-label"><b>Manufacturer Name:</b></label>
+                <input type="text" class="form-control form-control-lg" formControlName="manufacturername" placeholder="Enter your name">                    
               </div>
               <div class="row text-dark">
                 <div class="col-md-12  pb-2">

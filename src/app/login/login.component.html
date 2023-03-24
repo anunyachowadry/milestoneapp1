@@ -1,72 +1,73 @@
-<section class="background-radial-gradient overflow-hidden"> 
+<br>
+<br>
 
-<table *ngIf="login" matSort>
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-          <h1 class="text-light text-uppercase" style="font-size: 5em;"><b>MILESTONE</b></h1>
-          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-            
-            The best offer <br />
-            <span style="color: hsl(218, 81%, 75%)">for your dreams</span>
-          </h1>
-          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-            Milestone Can Help You Make Your Dreams a Reality.
-            Explore modular kitchens with exceptional quality standards and marvelous designs.
-             Get the best range of modular kitchen design. Direct Quartz Slab Importer. Competitive, Fair Prices. 
-             Expert Installation Team. Superior Services. Beautiful 500+ marble designs at Milestone
-             to make your spaces majestic and timeless. Luxurious and best quality imported 
-             marble from the quarries around the world at Milestone.
-          </p>
-        </div>
-  
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-  
-          <div class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
-              <form [formGroup]="loginForm">
-                <div class="text-center">
-                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                </div>        
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form3Example3"><b>Email address</b></label>
-                    <input type="email" id="form3Example3" class="form-control" formControlName="email">
-                    <span style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter your email</span>
-                </div>
-  
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                   <label class="form-label" for="form3Example4"><b>Password</b></label>
-                   <input [type]="changetype?'text':'password'" id="form3Example4" class="form-control" formControlName="password">
-                   <span class="eye" (click)="view()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" style="color: black;"></i></span>
-                   <span style="color: red;" *ngIf="password && password.invalid && password.touched">Please enter your password</span>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block col-xl-12" (click)="loginSubmit(loginForm)">
-                    Login
-                  </button>
-                  <br>
-                  <br>  
-                <!-- Register buttons -->
-                <div class="text-center">
-                    <h2>Login with mobile? <a class="link-info" (click)="togglePhone()" style="cursor: pointer;">Login</a></h2>                 
-                </div>
-                <hr class="my-4">
-                <div class="text-center">
-                    <h2>Don't have an account? <a class="link-info" (click)="toggleSignup()" style="cursor: pointer;">Register here</a></h2>
-                </div>
-              </form>
+ 
+<body>
+  <div *ngIf="login" >
+    <section class="vh-100">
+      <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+
+          
+          <div class="col-md-9 col-lg-6 col-xl-5">
+            <h1 style="color:#697184;font-weight: bold;font-size: xx-large;margin-left: 20%;">MILESTONE</h1>
+            <img src="https://media.istockphoto.com/id/503047952/photo/natural-stone-tiles-marble-granite-samples-palette-stack.jpg?s=612x612&w=0&k=20&c=u4n8G_xouo13QE8OGooVbg1qhmayhLylaaf1enFDZKw="
+              class="img-fluid" alt="Sample image" style="width:100%">
+              <br>
+              <br>
+          </div>
+          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="border:1px solid rgb(167, 167, 167);border-radius: 10px;padding:2%">
+            <form [formGroup]="loginForm">
+           <h1 class="text-primary" style="text-align: center;font-weight: 800;font-size: xx-large;">Login</h1>
+    
+           
+    <br>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3" style="font-size: 15px;">Email address</label>
+                <input type="email" id="form3Example3" class="form-control form-control-lg"
+                  placeholder="Enter a valid email address" formControlName="email"/>
+                  <span style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter your email</span>
+               
+              </div>
+    
+              <!-- Password input -->
+              <div class="form-outline mb-3">
+                <label class="form-label" for="form3Example4" style="font-size: 15px;">Password</label>
+                <input type="password" id="form3Example4" class="form-control form-control-lg"
+                  placeholder="Enter password" formControlName="password" />
+                  <!-- <span class="eye" (click)="view()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" style="color: black;"></i></span> -->
+                  <span style="color: red;" *ngIf="password && password.invalid && password.touched">Please enter your password</span>
+               
+              </div>
+              <a href="#!" class="text-primary" style="float: right;">Forgot password?</a>
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div>
+              <br>
+              <div class="text-center">
+                <h2>Login with mobile?<a class="text-danger" (click)="togglePhone()" style="cursor: pointer;font-size: smaller;">Login</a>  </h2>          
             </div>
+            <h2 style="text-align: center;">Don't have an account?  <a 
+              class="link-danger" style="font-size: smaller;"  (click)="toggleSignup()">Register</a></h2>
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="button" class="btn btn-primary btn-lg"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="loginSubmit(loginForm)">Login</button>
+                
+              </div>
+    
+            </form>
           </div>
         </div>
       </div>
-    </div>
-    </table> 
-  </section>
+     
+    </section>
+  </div> 
+
+
 
 
 <!--this is for log in with mobile page-->
@@ -223,6 +224,7 @@
         </form>
       </div>
     </table>
+</body>
       
       
       

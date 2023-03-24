@@ -85,6 +85,7 @@
       <br>
 <br>
 <br>
+<body>
 <div class="container" align="center">
   <i  style="font-size:100px;" class="fa fa-truck" aria-hidden="true"></i>
         <h3 class="mt-3 text-blue">Welcome</h3>
@@ -144,23 +145,28 @@
     </div>
 
 <div class="form-outline mb-4">
-<textarea [(ngModel)]="Area" class="form-control"style="border-color: blue" id="form11Example7" rows="4" name="Area"></textarea>
-<label class="form-label" for="form11Example7" id="validationCustom01" required>Area</label>
+<textarea [(ngModel)]="Address" class="form-control"style="border-color: blue" id="form11Example7" rows="4" name="Area"></textarea>
+<label class="form-label" for="form11Example7" id="validationCustom01" required>Address</label>
 </div>
     </div>
   </form>
-<button class="btn btn-primary" (click)="popup()" style="margin-left: 58%;
+</body>
+<!-- <button class="btn btn-primary" (click)="popup()" style="margin-left: 58%;
 margin-top: -10%">Continue to pay</button>
 <button class="btn btn-primary" routerLink="/cart" style="margin-left:14px; margin-top: -21%"
->Go Back</button>
-  
+>Go Back</button> -->
+<div class="mt-1  text-center ">
+  <button class="submit" type="submit"  (click)="popup()">Continue to pay</button>&nbsp;
+</div>
+  <br><br><br><br><br><br><br>
 <div *ngIf="pop">
   <div class="pop-up-drop">
     <div class="pop-up">
       <i class="fa fa-close" style="font-size:24px;color:black;float: right;" (click)="close()" ></i>
-        <button class="btn btn-primary" style="    margin-top: 80px;
-        margin-left: 30%" (click)="cash1()" >Pay by cash</button><br>
-        <button class="btn btn-primary" style="margin-top: 60px;margin-left: 30%; " routerLink="/payment">Pay by card </button>
+        <button    
+       (click)="cash1()" >Pay by cash</button><br>
+        <button   routerLink="/payment">Pay by card </button>
       </div>
     </div>
     </div>
+   

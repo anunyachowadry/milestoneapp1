@@ -35,7 +35,8 @@ export class AddProductComponent implements OnInit {
       quality: new FormControl(""),
       date: new FormControl(""),
       mobile:new FormControl(""),
-      description: new FormControl("")
+      description: new FormControl(""),
+      manufacturername:new FormControl("")
     })   
 
   }
@@ -60,6 +61,7 @@ export class AddProductComponent implements OnInit {
     this.productForm.value.date ==''||
     this.productForm.value.mobile ==''||
     this.productForm.value.description ==''||
+    this.productForm.value.manufacturername ==''||
     this.productForm.value.price =='')
     { 
       Swal.fire(  
