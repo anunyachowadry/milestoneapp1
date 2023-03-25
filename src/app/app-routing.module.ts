@@ -36,8 +36,15 @@ import { UpdatedealerComponent } from './updatedealer/updatedealer.component';
 import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 import { AddManufacturerComponent } from './add-manufacturer/add-manufacturer.component';
 import { EditManufacturerComponent } from './edit-manufacturer/edit-manufacturer.component';
+
 import { BlackgalaxyComponent } from './blackgalaxy/blackgalaxy.component';
 import { GalaxyrouteComponent } from './galaxyroute/galaxyroute.component';
+
+
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { EmailVerifyComponent } from './email-verify/email-verify.component';
+
 
 const routes: Routes = [
  // { path:'',redirectTo:'login',pathMatch:'full'},
@@ -45,7 +52,7 @@ const routes: Routes = [
   { path : 'homepage', component:HomepageComponent,canActivate:[CactivateGuard]},
   { path : 'product',component:ProductComponent,canActivate:[CactivateGuard]}  ,   
   { path : 'add-dealer',component:AddDealerComponent,canActivate:[CactivateGuard]},
-  { path : 'profile',component:ProfileComponent,canActivate:[CactivateGuard]}, 
+  { path : 'profile',component:ProfileComponent}, 
   { path : 'dealer',component:DealerComponent,canActivate:[CactivateGuard]},
   { path : 'add-product',component:AddProductComponent,canActivate:[CactivateGuard]},   
   { path : 'otp',component:OtpComponent},
@@ -75,9 +82,15 @@ const routes: Routes = [
   { path : 'manufacturer',component:ManufacturerComponent},
   { path : 'add-manufacturer',component:AddManufacturerComponent},
   { path : 'Edit-manufacturer',component:EditManufacturerComponent},
+
   {path:'blackgalaxy',component:BlackgalaxyComponent},
 
-  {path:'galaxyroute',component:GalaxyrouteComponent}
+  {path:'galaxyroute',component:GalaxyrouteComponent},
+
+  { path : 'about',component:AboutUsComponent},
+  { path : 'forgotPassword/:token',component:ForgotPasswordComponent},
+  { path : 'email-verify',component:EmailVerifyComponent}
+
 
 ]; 
 

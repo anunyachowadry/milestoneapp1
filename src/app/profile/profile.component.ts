@@ -18,18 +18,20 @@ export class ProfileComponent implements OnInit {
   products: any
   
   profileForm:any={
-    Firstname:'',
-    Lastname:'',
-    mobile:'',
-    Email:'',
-    Password:'',
-    City:'',
-    Pincode:'',
-    Street:'',
-    State:'',
+  Firstname:'',
+  Lastname:'',
+  mobile:'',
+  Email:'',
+  Password:'',
+  City:'',
+  Pincode:'',
+  Street:'',
+  State:'',
   } 
   Form: any;
-  constructor(private service:ProfileService, private fb:FormBuilder,private router:Router) {}  
+
+  constructor(private service:ProfileService, private fb:FormBuilder,private router:Router) {
+  }
 
   ngOnInit(): void {
     this.text = JSON.parse(localStorage.getItem('Login')||'{}') 
@@ -48,7 +50,9 @@ export class ProfileComponent implements OnInit {
     this.companyForm = true
     this.profile = false
   }
+
   submit(){
+    localStorage.setItem('Login',JSON.stringify(this.text))
     console.log(this.Form.value)
     
         fetch("http://localhost:2000/signupform/addCompany/" + this.text.Authentication, {
@@ -66,16 +70,24 @@ export class ProfileComponent implements OnInit {
     
               this.products = result  //it  runs $parse automatically when it runs the $digest loop, basically $parse is the way angular evaluates expressions
             console.log(this.products)
+
             Swal.fire( 'Submitted successfully!', '', 'success').then(() =>{         
               this.companyForm = false
               this.profile = true
             })
+
+            Swal.fire( 'Added successfully!', '', 'success').then(() =>{    
+              this.router.navigate(["login"])     
+              // this.companyForm = false
+              // this.profile = true
+            })  
+
                   
           }
           ).catch(err =>
             console.log(err))
-      }  
-
+      }
+ 
   
   arrow(){
     this.companyForm = false

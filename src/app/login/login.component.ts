@@ -29,24 +29,20 @@ var config = {
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
- 
+export class LoginComponent implements OnInit { 
   login=true;
   loginForm:any   
- 
   withMobile: any;
   reCaptchaVerifier: any;
   mobile1:any   
   loginData: any;
- 
-
+  Form:any
   visible=true;
   changetype=true;
-
   datas: any=[];
   showSignup = false;
   SignupForm: any;
+  mouni: any;
 
   constructor(
     private modalCtrl: ModalController,
@@ -136,7 +132,7 @@ export class LoginComponent implements OnInit {
     localStorage.setItem('Login',JSON.stringify(this.loginData));
     console.log(this.loginData)       
     
-    if(result.status ==='failed'){
+    if(result.status === 'failed'){
       Swal.fire( 
         'Cancelled',
         'Invalid username or password!',
@@ -146,7 +142,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(["profile"])
      } 
     })
-  }    
+    }   
   }
 
   details:any=[]
@@ -240,19 +236,23 @@ else{
    .catch(error => console.log('error',error))             
 } 
 
-// fetch("http://localhost:2000/signupform/emailnotification", {
-//   method:'post',
-//   headers:{
-//     "Access-Control-Allow-Origin": "*",
-//     "Content-Type":'application/json'
-//   },
-//   body:JSON.stringify(this.SignupForm.value.Email)
-// }).then(res=> res.json())
-// .then(result=>{ 
-//   console.log(result)
-// }
-// )
+this.Form = new FormGroup({
+  Email : new FormControl(""),
+  Message:new FormControl('congratulations your signup successfully!!') 
+})
 
+fetch("http://localhost:2000/signupform/emailnotification", {
+  method:'post',
+  headers:{
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type":'application/json'
+  },
+  body:JSON.stringify(this.Form.value.Email)
+}).then(res=> res.json())
+.then(result=>{ 
+  console.log(result)
+}
+)
 }
 
 

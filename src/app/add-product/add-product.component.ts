@@ -30,11 +30,13 @@ export class AddProductComponent implements OnInit {
       size: new FormControl(""),
       thick: new FormControl(""),
       qnt: new FormControl(""),
+      Quantity: new FormControl(""),
       price: new FormControl(""),
       region: new FormControl(""),
       quality: new FormControl(""),
       date: new FormControl(""),
       mobile:new FormControl(""),
+      PhoneNumber:new FormControl(""),
       description: new FormControl(""),
       manufacturername:new FormControl("")
     })   
@@ -59,7 +61,10 @@ export class AddProductComponent implements OnInit {
     this.productForm.value.region ==''||
     this.productForm.value.quality ==''||
     this.productForm.value.date ==''||
+    this.productForm.value.Quantity ==''||
+
     this.productForm.value.mobile ==''||
+    this.productForm.value.PhoneNumber ==''||
     this.productForm.value.description ==''||
     this.productForm.value.manufacturername ==''||
     this.productForm.value.price =='')

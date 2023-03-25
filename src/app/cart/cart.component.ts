@@ -10,6 +10,7 @@ export class CartComponent implements OnInit {
  
     OrderItems:any;
     cartItem: number = 0;
+    Totalprice:any;
   Get: any;
   sign: any=[]
 
@@ -53,12 +54,12 @@ export class CartComponent implements OnInit {
     }
   
     // total amount
-    grandtotal: number = 0;
+    grandtotal: any;
     //total function
     loadCart() {
       if (localStorage.getItem('anunya')) {
         this.getCartDetails = JSON.parse(localStorage.getItem('anunya') || '{}');
-        this.grandtotal = this.getCartDetails.reduce(function (acc: number, val: { price: number; qnt: number; }) {   // acc is a name,val isa rate
+        this.grandtotal = this.getCartDetails.reduce(function (acc: any, val: { price: any; qnt: any; }) {   // acc is a name,val isa rate
           return acc + (val.price * val.qnt);  // return the total amount
         }, 0);
       }

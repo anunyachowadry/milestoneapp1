@@ -22,6 +22,7 @@ export class BlackgalaxyComponent implements OnInit {
   mobile:any;
   description: any;
   manufacturername:any;
+  PhoneNumber:any;
   searchtext:any
     cart: any;
     // cart1: any=[]
