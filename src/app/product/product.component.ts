@@ -64,7 +64,7 @@ export class ProductComponent implements OnInit {
  
     get() {
       console.log('getstoreDealer')
-      fetch("http://localhost:1000/dealerRouter/dealers", {
+      fetch("https://periwinkle-clam-robe.cyclic.app/dealerRouter/dealers", {
         method: 'GET',
       headers: {
         "access-Control-Allow-Origin": "*",
