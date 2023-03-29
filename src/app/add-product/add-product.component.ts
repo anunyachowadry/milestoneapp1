@@ -78,7 +78,7 @@ export class AddProductComponent implements OnInit {
          'error'                                  //then take one alert message like not save all data
        ) 
     }else{  
-       fetch("http://localhost:2000/products/addproduct", {
+       fetch("https://lime-defiant-gecko.cyclic.app/products/addproduct", {
        method:'post',
        headers:{
          "Access-Control-Allow-Origin": "*",

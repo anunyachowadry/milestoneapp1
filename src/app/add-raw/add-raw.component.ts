@@ -65,7 +65,7 @@ export class AddRawComponent implements OnInit {
          'error'                                  //then take one alert message like not save all data
        ) 
     }else{  
-       fetch("http://localhost:2000/raw/addraw", {
+       fetch("https://lime-defiant-gecko.cyclic.app/raw/addraw", {
        method:'post',
        headers:{
          "Access-Control-Allow-Origin": "*",

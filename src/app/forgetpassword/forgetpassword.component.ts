@@ -36,7 +36,7 @@ export class ForgetpasswordComponent implements OnInit {
 
     //This is for product getting (gett) call 
     getProduct(){    
-      fetch("http://localhost:2000/signupform/getsignupdetails", {
+      fetch("https://lime-defiant-gecko.cyclic.app/signupform/getsignupdetails", {
      method:'get',
      headers:{
        "Access-Control-Allow-Origin": "*",
@@ -58,7 +58,7 @@ export class ForgetpasswordComponent implements OnInit {
     console.log(this.Form)
     this.sign=this.details.filter((item:any)=>item.Email=== this.Email)
     console.log(this.sign)
-    fetch("http://localhost:2000/signupform/updatePassword/" + this.Form.value.Email, {
+    fetch("https://lime-defiant-gecko.cyclic.app/signupform/updatePassword/" + this.Form.value.Email, {
       method: 'PUT',
       headers: {
         "Access-Control-Allow-Origin": "*",        

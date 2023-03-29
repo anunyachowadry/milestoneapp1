@@ -16,7 +16,7 @@ export class ShippersComponent implements OnInit {
   }
 
   getProduct(){    
-    fetch("http://localhost:2000/shippers/getshipper", {
+    fetch("https://lime-defiant-gecko.cyclic.app/shippers/getshipper", {
    method:'get',
    headers:{
      "Access-Control-Allow-Origin": "*",

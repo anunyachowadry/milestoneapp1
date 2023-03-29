@@ -22,7 +22,7 @@ edit(shippers:any){
 }
 
 delete(Mobile:any){    
-  fetch("http://localhost:2000/shippers/delete/" + Mobile,{
+  fetch("https://lime-defiant-gecko.cyclic.app/shippers/delete/" + Mobile,{
    method:'DELETE',
    headers:{
       "access-Control-Allow-Origin":"*"

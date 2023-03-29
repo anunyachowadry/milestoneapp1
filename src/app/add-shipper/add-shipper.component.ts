@@ -41,7 +41,7 @@ export class AddShipperComponent implements OnInit {
            'error'                                  //then take one alert message like not save all data
          ) 
       }else{  
-         fetch("http://localhost:2000/shippers/addshipper", {
+         fetch("https://lime-defiant-gecko.cyclic.app/shippers/addshipper", {
          method:'post',
          headers:{
            "Access-Control-Allow-Origin": "*",

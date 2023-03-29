@@ -68,7 +68,7 @@ export class BlackgalaxyComponent implements OnInit {
    
   get() {
     console.log(this.name)
-    fetch("https://long-rose-brown-bear-kilt.cyclic.app/products/getbyName/" + this.name, {
+    fetch("https://lime-defiant-gecko.cyclic.app/products/getbyName/" + this.name, {
       method: 'GET',
     headers: {
       "access-Control-Allow-Origin": "*",

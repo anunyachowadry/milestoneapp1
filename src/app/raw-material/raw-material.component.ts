@@ -18,7 +18,7 @@ export class RawMaterialComponent implements OnInit {
   }
    //This is for product getting (gett) call 
    getProduct(){    
-    fetch("http://localhost:2000/raw/getraw", {
+    fetch("https://lime-defiant-gecko.cyclic.app/raw/getraw", {
    method:'get',
    headers:{
      "Access-Control-Allow-Origin": "*",

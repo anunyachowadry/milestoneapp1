@@ -59,7 +59,7 @@ export class ProductDescriptionComponent implements OnInit {
   }).then((result) => {
 
   console.log(Number)
-    fetch("http://localhost:2000/products/deleteproduct/" + prodId,{
+    fetch("https://lime-defiant-gecko.cyclic.app/products/deleteproduct/" + prodId,{
      method:'DELETE',
      headers:{
        "access-Control-Allow-Origin":"*"

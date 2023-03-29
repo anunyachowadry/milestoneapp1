@@ -35,7 +35,7 @@ export class EmailVerifyComponent implements OnInit {
     ) 
  }
  else{
-     fetch("http://localhost:2000/auth/getsignupdetail", {
+     fetch("https://lime-defiant-gecko.cyclic.app/auth/getsignupdetail", {
       method:'post',
       headers:{
         "Access-Control-Allow-Origin": "*",

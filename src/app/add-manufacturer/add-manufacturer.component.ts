@@ -41,7 +41,7 @@ export class AddManufacturerComponent implements OnInit {
         body:JSON.stringify(this.Signup.value)
       };
       console.log(requestOptions);  
-      fetch("http://localhost:2000/manufacturer/adddata",{
+      fetch("https://lime-defiant-gecko.cyclic.app/manufacturer/adddata",{
         method:'POST',
         headers:{
           "Access-Control-Allow-Origin":"*",

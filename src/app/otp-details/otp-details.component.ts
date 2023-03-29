@@ -19,7 +19,7 @@ export class OtpDetailsComponent implements OnInit {
 
     //This is for product getting (gett) call 
     getProduct(){    
-      fetch("http://localhost:2000/signupform/getsignupdetails", {
+      fetch("https://lime-defiant-gecko.cyclic.app/signupform/getsignupdetails", {
      method:'get',
      headers:{
        "Access-Control-Allow-Origin": "*",

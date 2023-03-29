@@ -45,7 +45,7 @@ export class InventoryComponent implements OnInit {
     var data={
       mobile:this.text.mobile
     }    
-     fetch("http://localhost:2000/products/getproduct", {
+     fetch("https://lime-defiant-gecko.cyclic.app/products/getproduct", {
     method:'post',
     headers:{
       "Access-Control-Allow-Origin": "*",
@@ -64,7 +64,7 @@ export class InventoryComponent implements OnInit {
  //This is for product delete
  delete(prodId:any){  
    console.log(Number)
-     fetch("http://localhost:2000/products/deleteproduct/" + prodId,{
+     fetch("https://lime-defiant-gecko.cyclic.app/products/deleteproduct/" + prodId,{
       method:'DELETE',
       headers:{
         "access-Control-Allow-Origin":"*"
