@@ -14,6 +14,8 @@ class="img-fluid" alt="Sample image" style="width:100%"> -->
         <br>
         <img src="https://media.istockphoto.com/id/503047952/photo/natural-stone-tiles-marble-granite-samples-palette-stack.jpg?s=612x612&w=0&k=20&c=u4n8G_xouo13QE8OGooVbg1qhmayhLylaaf1enFDZKw="
 class="img-fluid" alt="Sample image" style="width:100%">
+<br>
+<br>
         
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="border:1px solid rgb(167, 167, 167);border-radius: 10px;padding:2%">
@@ -35,7 +37,7 @@ class="img-fluid" alt="Sample image" style="width:100%">
               <!-- <span class="eye" (click)="view()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" style="color: black;"></i></span> -->
               <span style="color: red;" *ngIf="password && password.invalid && password.touched">Please enter your password</span>
           </div>
-          <a href="#!" class="text-primary" style="float: right;">Forgot password?</a>
+          <a href="#!" class="text-primary" style="float: right;" routerLink="/email-verify">Forgot password?</a>
           <div class="form-check mb-0">
             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
             <label class="form-check-label" for="form2Example3">

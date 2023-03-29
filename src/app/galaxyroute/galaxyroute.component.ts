@@ -26,7 +26,7 @@ export class GalaxyrouteComponent implements OnInit {
 
   
 
-
+  
   itemsCart: any = [];  // itemsCart is a global array
   addCart(category: any) {
     let cartDataNull = localStorage.getItem('anunya'); // cartDataNull is a variable , localCart is a key,

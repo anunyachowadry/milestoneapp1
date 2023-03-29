@@ -36,7 +36,9 @@ export class DealerProductComponent implements OnInit {
       quality:this.data.quality,
       region:this.data.region,
       date:this.data.date,
-      description:this.data.description
+      description:this.data.description,
+      manufacturername:this.data.manufacturername,
+      PhoneNumber:this.data.PhoneNumber
     }
     console.log(data)
     this.service.update(data,id).subscribe((datas)=>{

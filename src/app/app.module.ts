@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SignupComponent } from './signup/signup.component';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './add-product/add-product.component';
+
+
 import { OtpComponent } from './otp/otp.component';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { NgOtpInputModule } from  'ng-otp-input';
@@ -37,13 +39,13 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { DealerProductComponent } from './dealer-product/dealer-product.component';
 import { LogComponent } from './log/log.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
-import { UpdatestatusComponent } from './updatestatus/updatestatus.component';
+
 import { DealerUpdateComponent } from './dealer-update/dealer-update.component';
 import { ProfileUpdateComponent } from './profile-update/profile-update.component';
 import { RawMaterialComponent } from './raw-material/raw-material.component';
 import { AddRawComponent } from './add-raw/add-raw.component';
 import { RawUpdateComponent } from './raw-update/raw-update.component';
-import { MenubarComponent } from './menubar/menubar.component';
+
 import { ShippersComponent } from './shippers/shippers.component';
 import { AddShipperComponent } from './add-shipper/add-shipper.component';
 import { ShipperDataComponent } from './shipper-data/shipper-data.component';
@@ -59,6 +61,10 @@ import { GalaxyrouteComponent } from './galaxyroute/galaxyroute.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { EmailVerifyComponent } from './email-verify/email-verify.component';
+import {Ng2TelInputModule} from 'ng2-tel-input';
+import { EmailverifyComponent } from './emailverify/emailverify.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { FirstCapDirective } from './first-cap.directive';
 
 
 
@@ -69,8 +75,7 @@ import { EmailVerifyComponent } from './email-verify/email-verify.component';
     AppComponent,
     LoginComponent,
     HomepageComponent,
-    SignupComponent,
-    SidebarComponent,
+  
     ProductComponent,
     AddProductComponent,
     OtpComponent,
@@ -86,13 +91,13 @@ import { EmailVerifyComponent } from './email-verify/email-verify.component';
     DealerProductComponent,
     LogComponent,
     ProductDescriptionComponent,
-    UpdatestatusComponent,
+  
     DealerUpdateComponent,
     ProfileUpdateComponent,
     RawMaterialComponent,
     AddRawComponent,
     RawUpdateComponent,
-    MenubarComponent,
+ 
     ShippersComponent,
     AddShipperComponent,
     ShipperDataComponent,
@@ -107,7 +112,12 @@ import { EmailVerifyComponent } from './email-verify/email-verify.component';
 
     AboutUsComponent,
     ForgotPasswordComponent,
-    EmailVerifyComponent
+    EmailVerifyComponent,
+    EmailverifyComponent,
+    ForgetpasswordComponent,
+    FirstCapDirective,
+    
+  
 
   ],
   imports: [
@@ -118,6 +128,8 @@ import { EmailVerifyComponent } from './email-verify/email-verify.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    
+   
     MatButtonModule ,
     FormsModule,
     ReactiveFormsModule, 
@@ -125,11 +137,16 @@ import { EmailVerifyComponent } from './email-verify/email-verify.component';
     Ng2SearchPipeModule,
     IonicModule.forRoot(),
     NgOtpInputModule,
+  
+   
+  
     
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
     // provideFirestore(() => getFirestore())   
   ],
+
+ 
   providers: [ IonicRouteStrategy],
   bootstrap: [AppComponent]
 })

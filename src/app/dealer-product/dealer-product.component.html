@@ -1,6 +1,4 @@
-<br>
-<br>
-<br> 
+<body>
 <br>  
 <i class="fa fa-arrow-left" style="margin-left: 1em; font-size: 20px;" routerLink="/inventory"></i>
 
@@ -82,7 +80,7 @@
                     <label for="birthdayDate" class="form-label"><b>Quality :</b></label>
                     <input type="text" class="form-control form-control-lg"  [(ngModel)]="this.data.quality">              
                   </div>
-                </div>
+                </div>                
                 <div class="col-md-6 mb-4 d-flex align-items-center">
                   <div class="form-outline datepicker w-100">
                     <label for="birthdayDate" class="form-label"><b>Processing date :</b></label>
@@ -90,6 +88,31 @@
                   </div>
                 </div>              
               </div> 
+
+              <div class="row ">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="form-outline datepicker w-100">
+                    <label for="birthdayDate" class="form-label"><b>Manufacturer :</b></label>
+                    <input type="text" class="form-control form-control-lg"  [(ngModel)]="this.data.manufacturername">              
+                  </div>
+                </div>                
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="form-outline datepicker w-100">
+                    <label for="birthdayDate" class="form-label"><b>PhoneNumber :</b></label>
+                    <input type="text" class="form-control form-control-lg" [(ngModel)]="this.data.PhoneNumber">                    
+                  </div>
+                </div>              
+              </div> 
+               <!-- <div class="form-outline datepicker w-100">
+                    <label for="birthdayDate" class="form-label"><b>Manufacturer :</b></label>
+                    <input type="text" class="form-control form-control-lg"  [(ngModel)]="this.data.manufacturername">              
+                  </div>
+                  <br>
+                  <div class="form-outline datepicker w-100">
+                    <label for="birthdayDate" class="form-label"><b>PhoneNumber:</b></label>
+                    <input type="text" class="form-control form-control-lg"  [(ngModel)]="this.data.PhoneNumber">              
+                  </div> -->
+
               <div class="row ">
                 <div class="col-md-12 pb-2">
                   <div class="form-outline">
@@ -97,6 +120,7 @@
                     <textarea type="text" class="form-control form-control-lg" [(ngModel)]="this.data.description" cols="5" rows="5"></textarea>                    
                   </div>
                 </div>
+                
               </div>         
 
               <div class="mt-4 pt-2  ">
@@ -108,7 +132,8 @@
         </div>
       </div>
     </div>
-  </div>      
+  </div>
+</body>      
        
             
            

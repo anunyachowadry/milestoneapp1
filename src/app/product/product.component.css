@@ -127,8 +127,20 @@ mat-toolbar{
   color: #fff;
   background-color: #4a7e80;
 }
-/* body{
-background-image: url(https://img.freepik.com/premium-photo/grey-marble-texture-background_34936-2588.jpg?w=2000);
-height: 100%;
-width: 100%;
-} */
+ body{
+  background-image: url(https://img.freepik.com/free-vector/close-up-white-marble-textured-background_53876-58927.jpg);
+  height: 100rem;
+}
+.submit{
+  background-color: #697184;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  height: 2.5em;
+  width: 7.7em;
+}
+.form-control{
+  padding-right: 25px;
+  background: url(https://static.thenounproject.com/png/101791-200.png) no-repeat right;
+   background-size:20px;
+}

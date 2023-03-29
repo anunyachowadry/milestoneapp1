@@ -38,6 +38,7 @@ export class CheckoutComponent implements OnInit {
     prodId:any;
     Totalprice:any;    
     imgurl:any;
+    Quantity:any;
   
   
   
@@ -92,19 +93,25 @@ export class CheckoutComponent implements OnInit {
         localStorage.removeItem('anunya');
       })
        
-      .catch(error => console.log('error',error));  
+      .catch(error => console.log('error',error)); 
+      
+      
       
 
     
   Swal.fire('order  placed Successfully!', '', 'success').then(() => {
-     window.location.href=('/blackgalaxy');
+     window.location.href=('/product');
      localStorage.removeItem('anunya');
-  } );
+  }
+   );
 }
+
 
 close(){
   this.pop=false;
 }
+
+
 
 }
 

@@ -1,36 +1,41 @@
 <body>
-<div class="row row-cols-2 sm-2 row-cols-md-4  g-5" style="padding-right: 1%;padding-left: 1%;" >
-  <input type="text"  style=" width: 70%; padding: 2%; font-size: medium; margin-left: 13%; border: 1px solid rgb(159, 159, 159);  padding: 1%;  " value="submit" placeholder= "Search..." [(ngModel)]="searchtext" name="array id" class="form-control">
+  <!-- <button (click)="toggle('vizagblue')">Vizag Blue</button>
+  <button (click)="toggle('blackgalaxy')"> Black Galaxy</button>
+  <button (click)="toggle('visconwhite')"> Viscon white</button> -->
+  <div class="row row-cols-2 sm-2 row-cols-md-4  g-5" style="padding-right: 1%;padding-left: 1%;">
+    <input type="text"
+      style=" width: 70%; padding: 2%; font-size: medium; margin-left: 13%; border: 1px solid rgb(159, 159, 159);  padding: 1%;  "
+      value="submit" placeholder="Search..." [(ngModel)]="searchtext" name="array id" class="form-control">
     <div *ngFor="let cart of products| filter:searchtext">
-        <br>
-<div class="col">
+      <br>
+      <div class="col">
 
-<div class="card h-100" >
-  <img src={{cart.imgurl}} class="card-img-top" style="height:10rem" (click)="anu(cart)">
-  <div class="card-body" style="align-items: center;" style="height: 100%; width:100%;">
-    <p style="font-weight: bold;"> {{cart.name}}</p>
- 
-      <tr>
-      <td style="font-weight: 600;"></td>
-        <td>{{cart.price}}</td>
-      </tr>
-    <tr>
-        
-        <td style="font-weight: 600;"></td>
-          <td>{{cart.thick}}</td>
-      </tr>
-      <tr>
-      
-        <td style="font-weight: 600;"></td>
-          <td>{{cart.size}}</td>
-      </tr>
-    <a href="#"  >Tap on image for more details</a>
+        <div class="card h-100">
+          <img src={{cart.imgurl}} class="card-img-top" style="height:10rem" (click)="anu(cart)">
+          <div class="card-body" style="align-items: center;" style="height: 100%; width:100%;">
+            <p style="font-weight: bold;"> {{cart.name}}</p>
+
+            <!-- <tr>
+              <td style="font-weight: 600;"></td>
+              <td>{{cart.price}}</td>
+            </tr>-->
+            <tr>
+
+              <td style="font-weight: 600;"></td>
+              <td>{{cart.thick}}</td>
+            </tr>
+            <tr>
+
+              <td style="font-weight: 600;"></td>
+              <td>{{cart.size}}</td>
+            </tr>
+            <p style="color:blue">Tap on image for more details</p> 
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
   </div>
- 
-</div>
-</div>
-
-
-</div>
-</div>
 </body>

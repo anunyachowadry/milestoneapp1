@@ -80,6 +80,8 @@ export class ProductDescriptionComponent implements OnInit {
     ).catch(err =>
      console.log(err))    
  } 
-
+ edit(products:any){   
+  localStorage.setItem('product',JSON.stringify(products))   
+}
 }
 

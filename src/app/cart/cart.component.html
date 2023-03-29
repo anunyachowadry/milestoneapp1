@@ -96,7 +96,7 @@
     <div class = "product-content">
       <h2 class = "product-title">{{cart.name}}</h2>
       <div class = "product-price"> 
-        <h2 class = "new-price"> Price: <span>{{cart.price}}</span></h2>
+        <h2 class = "new-price"> Price (sqft): <span>{{cart.price}}</span></h2>
       </div>
 
       <div class = "product-detail">
@@ -107,6 +107,8 @@
           <li>Color <span style="padding-left: 2.83cm;">:{{cart.color}}</span></li>
           <hr>
           <li>Ordered Quantity <span style="padding-left: 0.4cm;"> :{{cart.qnt}}</span></li>
+          <hr>
+          <li>Available Quantity <span style="padding-left: 0.4cm;"> :{{cart.Quantity}}</span></li>
           <hr>
           <li>Location of stone <span style="padding-left: 0.6cm;">:{{cart.region}}</span></li>
           <hr>
@@ -183,7 +185,7 @@
                           </body>
          
         
-       
+    <body>   
 <div *ngIf="getCartDetails.length ==0" class="noitem">
   <div>
    
@@ -194,3 +196,4 @@
   </p>
   </div>
 </div> 
+</body>

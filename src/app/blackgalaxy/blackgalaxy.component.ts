@@ -23,10 +23,14 @@ export class BlackgalaxyComponent implements OnInit {
   description: any;
   manufacturername:any;
   PhoneNumber:any;
-  searchtext:any
+  searchtext:any;
+  getbyName:any;
+
     cart: any;
+    adddata:any=[]
     // cart1: any=[]
     filter: any;
+    type:any;
   
   
   constructor(){
@@ -35,16 +39,14 @@ export class BlackgalaxyComponent implements OnInit {
   
   
     ngOnInit(): void {
+     
+      this.type=JSON.parse(localStorage.getItem('rahul')||'{}') ;
+      
+      this.name=this.type.name
+      console.log(this.name)
+     
       this.get();
-      const localdata=localStorage.getItem('anu')
-      if(localdata!=null){                                                    
-        this.cart = JSON.parse(localdata)
-      }
-      // const localdata2=localStorage.getItem('local')
-      // if(localdata2!=null){                                                    
-      //   this.cart1 = JSON.parse(localdata2)
-      //   console.log(this.cart1)
-      // }
+      
     
     }
   
@@ -60,18 +62,13 @@ export class BlackgalaxyComponent implements OnInit {
     // localStorage.setItem('local',JSON.stringify(this.cart1));
     console.log(cart)
    
-    }
-  // toggle(Name: any) {
-  //   console.log(Name)
-  //   this.filter = Name
-  //   this.get()
-  //   console.log(Name)
-  // } 
+  }
+  
   
    
   get() {
-    console.log('getstoreDealer')
-    fetch("http://localhost:2000/products/products" , {
+    console.log(this.name)
+    fetch("http://localhost:2000/products/getbyName/" + this.name, {
       method: 'GET',
     headers: {
       "access-Control-Allow-Origin": "*",
@@ -82,7 +79,7 @@ export class BlackgalaxyComponent implements OnInit {
     .then(response => response.json())
     .then(result => {
       console.log(result),
-        this.products = result.products
+        this.products = result.product
   
       console.log(this.products)
   

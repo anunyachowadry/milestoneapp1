@@ -1,63 +1,258 @@
 <br>
-<br>
+
 <br>
 
-<i class="fa fa-arrow-left" style="margin-left: 1em; margin-top: 2em;font-size: 20px;" routerLink="/inventory"></i>
-<br>
-<br>
+
+<head>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
   <body> 
-    <div class="container bootdey">
-      <div class="panel panel-default panel-order">        
-        <div class="panel-body" >                           
-            <div>
-              <div class="row">
-                  <div class="col-md-1"><img src ="{{data.imgurl}}" style="width:80%;"></div>
-                    <div class="col-md-11">
-                        <div class="row">
-                          <div class="col-md-12" style="padding:25px; font-size: 1.5em;" >  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Product Id : </b> {{data.prodId}}</span><br>                                
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> {{data.name}}</span><br>  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Colour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>{{data.color}}</span><br>  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">size &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> {{data.size}}</span><br>  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Thickness &nbsp;&nbsp;: </b> {{data.thick}}</span><br>   
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Quantity &nbsp;&nbsp;&nbsp;&nbsp;: </b> {{data.qnt}}</span><br>   
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> {{data.price}}</span><br>   
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Quality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> {{data.quality}}</span><br>  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Location of stone : </b> {{data.region}}</span><br>  
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Processing date &nbsp;&nbsp;&nbsp;: </b> {{data.date}}</span><br>                 
-                            <span class="label label-info"><b style="color: rgb(81, 81, 211)">Description : </b>{{data.description}}</span><br>                            
-                          </div>                               
-                        </div>
-                        <!-- <div>
-                            <button class="btn btn-danger" (click)="delete(data.prodId)">Delete</button>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-primary" style="width:5em" (click)="edit(data)" routerLink="/dealerproduct">Edit</button>
-                        </div> -->
-                    </div> 
-                  </div>
-              </div> 
-                                
-        
-                                            
-            </div>                               
+    
+
+ 
+<div class = "card-wrapper">
+  <div class = "card">
+    <!-- card left -->
+    <div class = "product-imgs">
+      <div class = "img-display">
+        <div class = "img-showcase">
+          <img src = "{{data.imgurl}}" alt = "shoe image">
+
         </div>
-   </div>                          
+      </div>
+    
+    </div>
+    <!-- card right -->
+    <div class = "product-content" style="    margin-left: 28px;">
+      <h2 class = "product-title" >{{data.name}}</h2>
+      <div class = "product-price"> 
+        <h2 class = "new-price"> Price (sqft): <span>{{data.price}}</span></h2>
+      </div>
+
+      <div class = "product-detail">
+
+        <ul>
+          <li >ProductId <span style="padding-left: 2cm;">:{{data.prodId}}</span></li>
+             <hr>
+          <li>Color <span style="padding-left: 2.8cm;">:{{data.color}}</span></li>
+          <hr>
+          <li>Quantity <span style="padding-left: 2.3cm;"> :{{data.qnt}}</span></li>
+          <hr>
+          <li>Location of stone <span style="padding-left: 0.64cm;">:{{data.region}}</span></li>
+          <hr>
+          <li>Processing date <span style="padding-left: 0.9cm;">:{{data.date}}</span></li>
+          <hr>
+          <li>Quality <span style="padding-left: 2.5cm;">:{{data.quality}}</span></li>
+          <hr>
+         
+          <li>Thickness <span style="padding-left: 1.9cm;">:{{data.thick}}</span></li>
+          <hr>
+          <li>size<span style="padding-left: 3.16cm;">:{{data.size}}</span></li>
+          <hr>
+          <li>Manufacturer<span style="padding-left: 1.46cm;">:{{data.manufacturername}}</span></li>
+          <hr>
+          <li>PhoneNumber<span style="padding-left: 1.31cm;">:{{data.PhoneNumber}}</span></li>
+          <hr>
+       
+        </ul>
+<br>
+        <h1>Description: </h1>
+        <p>{{data.description}}</p>
+        <hr>
+        <br>
+
+        <i class="fa fa-phone"  aria-hidden="true" style="color:green"> &nbsp; Contact Supplier
+         
+        </i>
+        <p><a href="tel:{{data.PhoneNumber}}">{{data.PhoneNumber}}</a></p>
+        <div class="section" style="padding-bottom:20px;">
+          <button class="btn btn-success" (click)="edit(data)" routerLink="/dealerproduct"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Edit
+          </button>
+         
+      </div> 
+        
+        
+
+      </div>
+
+      <br>
+      <br>
+  
+      
+      
+    </div>
+  </div>
+</div>
+    
+
 </body>
+                   
+                                                          
+               
 
 
 
 
 
-    
-
- 
 
 
-    
-   
- 
 
- 
 
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
       this.cartItemFunc()
     
     }
+    
   
     getCartDetails: any = [];
     // get the details into localstorage
@@ -105,6 +106,7 @@ export class CartComponent implements OnInit {
         this.cartItem = cartCount.length;  
       }
     }
+    
     
   }
 

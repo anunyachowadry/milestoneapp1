@@ -128,6 +128,5 @@ background-color: rgba(255, 255, 255, 0.1);
   .form-control{
     padding-right: 25px;
     background: url(https://static.thenounproject.com/png/101791-200.png) no-repeat right;
-     background-size: 20px;
-     
-  }
+     background-size:20px;
+}
