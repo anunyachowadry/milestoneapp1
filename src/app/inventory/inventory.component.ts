@@ -45,7 +45,7 @@ export class InventoryComponent implements OnInit {
     var data={
       mobile:this.text.mobile
     }    
-     fetch("https://long-rose-brown-bear-kilt.cyclic.app/products/getproduct", {
+     fetch("http://localhost:2000/products/getproduct", {
     method:'post',
     headers:{
       "Access-Control-Allow-Origin": "*",
@@ -64,7 +64,7 @@ export class InventoryComponent implements OnInit {
  //This is for product delete
  delete(prodId:any){  
    console.log(Number)
-     fetch("https://long-rose-brown-bear-kilt.cyclic.app/products/deleteproduct/" + prodId,{
+     fetch("http://localhost:2000/products/deleteproduct/" + prodId,{
       method:'DELETE',
       headers:{
         "access-Control-Allow-Origin":"*"

@@ -36,7 +36,7 @@ export class EmailverifyComponent implements OnInit {
     ) 
  }
  else{
-     fetch("https://long-rose-brown-bear-kilt.cyclic.app/auth/getsignupdetail", {
+     fetch("http://localhost:2000/auth/getsignupdetail", {
       method:'post',
       headers:{
         "Access-Control-Allow-Origin": "*",
