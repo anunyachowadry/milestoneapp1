@@ -49,7 +49,7 @@ searchtext:any;
   ngOnInit(): void {
     // this.data2();
 
-    fetch("http://localhost:2000/signupform/getsignupdetails",{
+    fetch("https://long-rose-brown-bear-kilt.cyclic.app/signupform/getsignupdetails",{
       method:"GET",
       headers:{
         "access-Control-Allow-Origin":"*",

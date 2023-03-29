@@ -117,7 +117,7 @@ export class LoginComponent implements OnInit {
         'error'                                  //then take one alert message like not save all data
       ) 
   }else{
-     fetch("http://localhost:2000/loginform/addlogin", {
+     fetch("https://long-rose-brown-bear-kilt.cyclic.app/loginform/addlogin", {
       method:'post',
       headers:{
         "Access-Control-Allow-Origin": "*",
