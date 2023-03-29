@@ -61,7 +61,7 @@ import { GalaxyrouteComponent } from './galaxyroute/galaxyroute.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { EmailVerifyComponent } from './email-verify/email-verify.component';
-import {Ng2TelInputModule} from 'ng2-tel-input';
+// import {Ng2TelInputModule} from 'ng2-tel-input';
 import { EmailverifyComponent } from './emailverify/emailverify.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { FirstCapDirective } from './first-cap.directive';

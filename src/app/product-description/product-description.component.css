@@ -1,15 +1,4 @@
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
+ /* ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
   li.active{border-bottom:3px solid silver; margin-left: 18px;}
   
   .item-photo{display:flex;justify-content:center;align-items:center;border-right:1px solid #f6f6f6;}
@@ -23,7 +12,7 @@
   div.section > div {width:100%;display:inline-flex;}
   div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-right:5px;max-width:18%;text-align:center;}
   .attr,.attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:1px solid gray;border-radius:2px;}
-  .attr.active,.attr2.active{ border:1px solid orange;}
+  .attr.active,.attr2.active{ border:1px solid orange;} */
   
   @media (max-width: 426px) {
       .container {margin-top:0px !important;}
@@ -54,10 +43,6 @@
     padding: 167%;
     padding-left: 2%;
   }
-   
-
-
-
    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
 *{
@@ -124,7 +109,6 @@ img{
     padding-left: 1.7rem;
     margin: 0.4rem 0;
     font-weight:600;
-
 }
 .product-link{
     text-decoration: none;

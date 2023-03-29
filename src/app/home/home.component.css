@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -390,18 +390,18 @@ img {
   gap: 20px;
   flex-wrap: wrap;
   /* background: #3b3054 url(../images/bg-shorten-desktop.svg) no-repeat right top; */
-  background-size: cover;
+  /* background-size: cover;
   padding: 45px;
   border-radius: 6px;
   margin-bottom: 20px;
   transform: translateY(-50%);
   transition: gap 0.3s;
-}
+} */
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .url-shorten-form {
     flex-direction: column;
-    /* background: #3b3054 url(../images/bg-shorten-mobile.svg) no-repeat right top; */
+  background: #3b3054 url(../images/bg-shorten-mobile.svg) no-repeat right top; 
     padding: 25px;
     margin-bottom: 0;
   }
@@ -691,7 +691,7 @@ img {
   .more-features-content > div:nth-child(3) {
     margin-top: 60px;
   }
-}
+} */
 
 .feature .feature-illustration {
   position: absolute;
@@ -712,7 +712,7 @@ img {
     width: 80px;
     height: 80px;
   }
-}
+} */
 
 .feature .feature-illustration img {
   max-width: 50%;

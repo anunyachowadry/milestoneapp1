@@ -35,6 +35,7 @@ export class AppComponent {
     console.log(this.text)
     this.aa=this.text.UserType
     console.log(this.aa)
+    // console.debug(1)
    // console.log(this.text.UserType)
  }
 
